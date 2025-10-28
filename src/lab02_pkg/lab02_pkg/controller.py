@@ -24,7 +24,7 @@ class Controller(Node):
 
         self.odom_sub = self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
 
-        self.create_subscription(LaserScan, "scan", self.scan_callback, qos_profile_sensor_data)
+        self.create_subscription(LaserScan, "/scan", self.scan_callback, qos_profile_sensor_data)
 
         self.groundtruth_sub = self.create_subscription(Odometry, '/ground_truth', self.groundtruth_callback, 10)
         self.timer = self.create_timer(0.1, self.timer_callback)
