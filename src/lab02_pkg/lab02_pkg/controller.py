@@ -5,6 +5,7 @@ from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
 import tf_transformations 
 import math 
+from rclpy.qos import qos_profile_sensor_data
 
 class Controller(Node):
     def __init__(self):
@@ -22,7 +23,9 @@ class Controller(Node):
         self.get_logger().info(f'Parameters loaded: max_speed={self.max_speed}, max_turn_rate={self.max_turn_rate}, is_active={self.is_active}')
 
         self.odom_sub = self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
-        self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
+
+        self.create_subscription(LaserScan, "scan", self.laser_callback, qos_profile_sensor_data)
+
         self.groundtruth_sub = self.create_subscription(Odometry, '/ground_truth', self.groundtruth_callback, 10)
         self.timer = self.create_timer(0.1, self.timer_callback)
 
