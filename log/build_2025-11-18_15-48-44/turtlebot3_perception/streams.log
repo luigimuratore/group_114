@@ -1,0 +1,19 @@
+[0.569s] Invoking command in '/home/students/group_114/build/turtlebot3_perception': LD_LIBRARY_PATH=/home/students/group_114/install/landmark_msgs/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/students/group_114/build/turtlebot3_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/students/group_114/install/turtlebot3_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/students/group_114/build/turtlebot3_perception/build --no-deps symlink_data
+[0.757s] running develop
+[0.878s] running egg_info
+[0.878s] writing turtlebot3_perception.egg-info/PKG-INFO
+[0.879s] writing dependency_links to turtlebot3_perception.egg-info/dependency_links.txt
+[0.879s] writing entry points to turtlebot3_perception.egg-info/entry_points.txt
+[0.879s] writing requirements to turtlebot3_perception.egg-info/requires.txt
+[0.879s] writing top-level names to turtlebot3_perception.egg-info/top_level.txt
+[0.880s] reading manifest file 'turtlebot3_perception.egg-info/SOURCES.txt'
+[0.881s] writing manifest file 'turtlebot3_perception.egg-info/SOURCES.txt'
+[0.881s] running build_ext
+[0.882s] Creating /home/students/group_114/install/turtlebot3_perception/lib/python3.10/site-packages/turtlebot3-perception.egg-link (link to .)
+[0.882s] Installing detection2landmark script to /home/students/group_114/install/turtlebot3_perception/lib/turtlebot3_perception
+[0.882s] Installing landmark_simulator script to /home/students/group_114/install/turtlebot3_perception/lib/turtlebot3_perception
+[0.882s] Installing laserscan2lines script to /home/students/group_114/install/turtlebot3_perception/lib/turtlebot3_perception
+[0.882s] 
+[0.882s] Installed /home/students/group_114/build/turtlebot3_perception
+[0.882s] running symlink_data
+[0.903s] Invoked command in '/home/students/group_114/build/turtlebot3_perception' returned '0': LD_LIBRARY_PATH=/home/students/group_114/install/landmark_msgs/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/students/group_114/build/turtlebot3_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/students/group_114/install/turtlebot3_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/students/group_114/build/turtlebot3_perception/build --no-deps symlink_data

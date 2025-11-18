@@ -1,0 +1,225 @@
+[0.016s] Invoking command in '/home/students/group_114/build/landmark_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/students/group_114/install/lab02_pkg:/opt/ros/humble /usr/bin/cmake /home/students/group_114/src/turtlebot3_perception/landmark_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/students/group_114/install/landmark_msgs
+[0.146s] -- The C compiler identification is GNU 11.4.0
+[0.265s] -- The CXX compiler identification is GNU 11.4.0
+[0.273s] -- Detecting C compiler ABI info
+[0.353s] -- Detecting C compiler ABI info - done
+[0.358s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.358s] -- Detecting C compile features
+[0.358s] -- Detecting C compile features - done
+[0.361s] -- Detecting CXX compiler ABI info
+[0.424s] -- Detecting CXX compiler ABI info - done
+[0.432s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.432s] -- Detecting CXX compile features
+[0.432s] -- Detecting CXX compile features - done
+[0.449s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.578s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.635s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.671s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.677s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.688s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.740s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.772s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[1.004s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.168s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.382s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.400s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.402s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.428s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.428s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.428s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.428s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.443s] -- Found PythonExtra: .so  
+[1.488s] -- Configuring done
+[1.506s] -- Generating done
+[1.513s] -- Build files have been written to: /home/students/group_114/build/landmark_msgs
+[1.517s] Invoked command in '/home/students/group_114/build/landmark_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/students/group_114/install/lab02_pkg:/opt/ros/humble /usr/bin/cmake /home/students/group_114/src/turtlebot3_perception/landmark_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/students/group_114/install/landmark_msgs
+[1.519s] Invoking command in '/home/students/group_114/build/landmark_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/students/group_114/install/lab02_pkg:/opt/ros/humble /usr/bin/cmake --build /home/students/group_114/build/landmark_msgs -- -j8 -l8
+[1.556s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.567s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.577s] [  5%] Built target ament_cmake_python_symlink_landmark_msgs
+[1.750s] running egg_info
+[1.750s] creating landmark_msgs.egg-info
+[1.751s] writing landmark_msgs.egg-info/PKG-INFO
+[1.751s] writing dependency_links to landmark_msgs.egg-info/dependency_links.txt
+[1.751s] writing top-level names to landmark_msgs.egg-info/top_level.txt
+[1.751s] writing manifest file 'landmark_msgs.egg-info/SOURCES.txt'
+[1.756s] reading manifest file 'landmark_msgs.egg-info/SOURCES.txt'
+[1.756s] writing manifest file 'landmark_msgs.egg-info/SOURCES.txt'
+[1.772s] [  5%] Built target landmark_msgs__cpp
+[1.777s] [  5%] Built target ament_cmake_python_build_landmark_msgs_egg
+[1.781s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.783s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.783s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.862s] [ 15%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_generator_c.dir/rosidl_generator_c/landmark_msgs/msg/detail/landmark_array__functions.c.o[0m
+[1.865s] [ 17%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_generator_c.dir/rosidl_generator_c/landmark_msgs/msg/detail/landmark__functions.c.o[0m
+[1.917s] [ 20%] [32m[1mLinking C shared library liblandmark_msgs__rosidl_generator_c.so[0m
+[1.954s] [ 20%] Built target landmark_msgs__rosidl_generator_c
+[1.964s] [ 23%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.966s] [ 28%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.966s] [ 28%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.997s] [ 30%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/landmark_msgs/msg/detail/dds_fastrtps/landmark_array__type_support.cpp.o[0m
+[1.998s] [ 33%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/landmark_msgs/msg/detail/dds_fastrtps/landmark__type_support.cpp.o[0m
+[2.096s] [ 35%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/landmark_msgs/msg/detail/landmark_array__type_support.cpp.o[0m
+[2.097s] [ 38%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/landmark_msgs/msg/detail/landmark__type_support.cpp.o[0m
+[2.117s] [ 41%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/landmark_msgs/msg/landmark__type_support.cpp.o[0m
+[2.229s] [ 43%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/landmark_msgs/msg/detail/landmark__type_support_c.cpp.o[0m
+[2.305s] [ 46%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/landmark_msgs/msg/landmark__type_support.cpp.o[0m
+[2.309s] [ 48%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/landmark_msgs/msg/detail/landmark__type_support.c.o[0m
+[2.334s] [ 51%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/landmark_msgs/msg/detail/landmark_array__type_support.c.o[0m
+[2.349s] [ 53%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/landmark_msgs/msg/landmark_array__type_support.cpp.o[0m
+[2.368s] [ 56%] [32m[1mLinking C shared library liblandmark_msgs__rosidl_typesupport_introspection_c.so[0m
+[2.378s] [ 58%] [32m[1mLinking CXX shared library liblandmark_msgs__rosidl_typesupport_c.so[0m
+[2.397s] [ 58%] Built target landmark_msgs__rosidl_typesupport_introspection_c
+[2.405s] [ 61%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/landmark_msgs/msg/detail/landmark_array__type_support_c.cpp.o[0m
+[2.410s] [ 64%] [32mBuilding CXX object CMakeFiles/landmark_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/landmark_msgs/msg/landmark_array__type_support.cpp.o[0m
+[2.421s] [ 64%] Built target landmark_msgs__rosidl_typesupport_c
+[2.548s] [ 66%] [32m[1mLinking CXX shared library liblandmark_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[2.581s] [ 69%] [32m[1mLinking CXX shared library liblandmark_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.613s] [ 69%] Built target landmark_msgs__rosidl_typesupport_introspection_cpp
+[2.648s] [ 69%] Built target landmark_msgs__rosidl_typesupport_fastrtps_cpp
+[2.660s] [ 71%] [32m[1mLinking CXX shared library liblandmark_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[2.686s] [ 74%] [32m[1mLinking CXX shared library liblandmark_msgs__rosidl_typesupport_cpp.so[0m
+[2.719s] [ 74%] Built target landmark_msgs__rosidl_typesupport_fastrtps_c
+[2.721s] [ 74%] Built target landmark_msgs__rosidl_typesupport_cpp
+[2.737s] [ 74%] Built target landmark_msgs
+[2.754s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.023s] [ 76%] Built target landmark_msgs__py
+[3.049s] [ 79%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_generator_py.dir/rosidl_generator_py/landmark_msgs/msg/_landmark_s.c.o[0m
+[3.050s] [ 82%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_generator_py.dir/rosidl_generator_py/landmark_msgs/msg/_landmark_array_s.c.o[0m
+[3.155s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/landmark_msgs/liblandmark_msgs__rosidl_generator_py.so[0m
+[3.201s] [ 84%] Built target landmark_msgs__rosidl_generator_py
+[3.218s] [ 87%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/landmark_msgs/_landmark_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.221s] [ 89%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/landmark_msgs/_landmark_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[3.223s] [ 92%] [32mBuilding C object CMakeFiles/landmark_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/landmark_msgs/_landmark_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.284s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/landmark_msgs/landmark_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.285s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/landmark_msgs/landmark_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.311s] [ 97%] Built target landmark_msgs__rosidl_typesupport_c__pyext
+[3.315s] [100%] [32m[1mLinking C shared library rosidl_generator_py/landmark_msgs/landmark_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.321s] [100%] Built target landmark_msgs__rosidl_typesupport_fastrtps_c__pyext
+[3.346s] [100%] Built target landmark_msgs__rosidl_typesupport_introspection_c__pyext
+[3.358s] Invoked command in '/home/students/group_114/build/landmark_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/students/group_114/install/lab02_pkg:/opt/ros/humble /usr/bin/cmake --build /home/students/group_114/build/landmark_msgs -- -j8 -l8
+[3.373s] Invoking command in '/home/students/group_114/build/landmark_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/students/group_114/install/lab02_pkg:/opt/ros/humble /usr/bin/cmake --install /home/students/group_114/build/landmark_msgs
+[3.383s] -- Install configuration: ""
+[3.384s] -- Execute custom install script
+[3.384s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/ament_index/resource_index/rosidl_interfaces/landmark_msgs
+[3.398s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__functions.h
+[3.408s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__struct.h
+[3.418s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__type_support.h
+[3.427s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__functions.h
+[3.432s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__struct.h
+[3.442s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__type_support.h
+[3.450s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/landmark.h
+[3.462s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/landmark_array.h
+[3.474s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/rosidl_generator_c__visibility_control.h
+[3.482s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/environment/library_path.sh
+[3.488s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/environment/library_path.dsv
+[3.495s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__rosidl_typesupport_fastrtps_c.h
+[3.503s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__rosidl_typesupport_fastrtps_c.h
+[3.510s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.522s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__rosidl_typesupport_introspection_c.h
+[3.529s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__rosidl_typesupport_introspection_c.h
+[3.535s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.543s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__builder.hpp
+[3.555s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__struct.hpp
+[3.565s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__traits.hpp
+[3.573s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__type_support.hpp
+[3.579s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__builder.hpp
+[3.586s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__struct.hpp
+[3.593s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__traits.hpp
+[3.601s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__type_support.hpp
+[3.613s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/landmark.hpp
+[3.622s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/landmark_array.hpp
+[3.630s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.637s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__rosidl_typesupport_fastrtps_cpp.hpp
+[3.644s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__rosidl_typesupport_fastrtps_cpp.hpp
+[3.651s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.662s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark__rosidl_typesupport_introspection_cpp.hpp
+[3.674s] -- Symlinking: /home/students/group_114/install/landmark_msgs/include/landmark_msgs/landmark_msgs/msg/detail/landmark_array__rosidl_typesupport_introspection_cpp.hpp
+[3.681s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/environment/pythonpath.sh
+[3.692s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/environment/pythonpath.dsv
+[3.703s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[3.712s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.719s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.726s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[3.733s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/__init__.py
+[3.741s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/_landmark_msgs_s.ep.rosidl_typesupport_c.c
+[3.749s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/_landmark_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.755s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/_landmark_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[3.760s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/landmark_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.765s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/landmark_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.774s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/landmark_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.779s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/liblandmark_msgs__rosidl_generator_py.so
+[3.785s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg/__init__.py
+[3.792s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg/_landmark.py
+[3.797s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg/_landmark_array.py
+[3.803s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg/_landmark_array_s.c
+[3.809s] -- Symlinking: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg/_landmark_s.c
+[3.818s] -- Up-to-date symlink: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/landmark_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.818s] -- Up-to-date symlink: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/landmark_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.819s] -- Up-to-date symlink: /home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/landmark_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.819s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/msg/Landmark.idl
+[3.830s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/msg/LandmarkArray.idl
+[3.838s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/msg/Landmark.msg
+[3.843s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/msg/LandmarkArray.msg
+[3.851s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/ament_index/resource_index/package_run_dependencies/landmark_msgs
+[3.858s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/ament_index/resource_index/parent_prefix_path/landmark_msgs
+[3.867s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/environment/ament_prefix_path.sh
+[3.875s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/environment/ament_prefix_path.dsv
+[3.883s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/environment/path.sh
+[3.893s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/environment/path.dsv
+[3.901s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/local_setup.bash
+[3.911s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/local_setup.sh
+[3.919s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/local_setup.zsh
+[3.929s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/local_setup.dsv
+[3.935s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/package.dsv
+[3.941s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/ament_index/resource_index/packages/landmark_msgs
+[3.948s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/rosidl_cmake-extras.cmake
+[3.956s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.963s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.973s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[3.980s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[3.986s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.995s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.006s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgsConfig.cmake
+[4.016s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgsConfig-version.cmake
+[4.022s] -- Symlinking: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/package.xml
+[4.029s] -- Installing: /home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_generator_c.so
+[4.029s] -- Set runtime path of "/home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_generator_c.so" to ""
+[4.029s] -- Installing: /home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_fastrtps_c.so
+[4.029s] -- Set runtime path of "/home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[4.029s] -- Installing: /home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_introspection_c.so
+[4.029s] -- Set runtime path of "/home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_introspection_c.so" to ""
+[4.029s] -- Installing: /home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_c.so
+[4.030s] -- Set runtime path of "/home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_c.so" to ""
+[4.030s] -- Installing: /home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_fastrtps_cpp.so
+[4.030s] -- Set runtime path of "/home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.030s] -- Installing: /home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_introspection_cpp.so
+[4.030s] -- Set runtime path of "/home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[4.030s] -- Installing: /home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_cpp.so
+[4.030s] -- Set runtime path of "/home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_typesupport_cpp.so" to ""
+[4.057s] Listing '/home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs'...
+[4.058s] Compiling '/home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/__init__.py'...
+[4.058s] Listing '/home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg'...
+[4.058s] Compiling '/home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg/__init__.py'...
+[4.058s] Compiling '/home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg/_landmark.py'...
+[4.058s] Compiling '/home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages/landmark_msgs/msg/_landmark_array.py'...
+[4.061s] -- Installing: /home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_generator_py.so
+[4.061s] -- Set runtime path of "/home/students/group_114/install/landmark_msgs/lib/liblandmark_msgs__rosidl_generator_py.so" to ""
+[4.061s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_generator_cExport.cmake
+[4.061s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_generator_cExport-noconfig.cmake
+[4.061s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[4.061s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.061s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgs__rosidl_typesupport_introspection_cExport.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgs__rosidl_typesupport_cExport.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_generator_cppExport.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgs__rosidl_typesupport_cppExport.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/landmark_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[4.062s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_generator_pyExport.cmake
+[4.063s] -- Installing: /home/students/group_114/install/landmark_msgs/share/landmark_msgs/cmake/export_landmark_msgs__rosidl_generator_pyExport-noconfig.cmake
+[4.064s] Invoked command in '/home/students/group_114/build/landmark_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/students/group_114/install/lab02_pkg:/opt/ros/humble /usr/bin/cmake --install /home/students/group_114/build/landmark_msgs

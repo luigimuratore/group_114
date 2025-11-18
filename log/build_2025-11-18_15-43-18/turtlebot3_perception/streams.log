@@ -1,0 +1,35 @@
+[0.417s] Invoking command in '/home/students/group_114/build/turtlebot3_perception': AMENT_PREFIX_PATH=/home/students/group_114/install/landmark_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/students/group_114/install/landmark_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/students/group_114/install/landmark_msgs/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/students/group_114/build/turtlebot3_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/students/group_114/install/turtlebot3_perception/lib/python3.10/site-packages:/home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/students/group_114/build/turtlebot3_perception/build --no-deps symlink_data
+[0.587s] running develop
+[0.696s] running egg_info
+[0.696s] creating turtlebot3_perception.egg-info
+[0.696s] writing turtlebot3_perception.egg-info/PKG-INFO
+[0.696s] writing dependency_links to turtlebot3_perception.egg-info/dependency_links.txt
+[0.696s] writing entry points to turtlebot3_perception.egg-info/entry_points.txt
+[0.696s] writing requirements to turtlebot3_perception.egg-info/requires.txt
+[0.696s] writing top-level names to turtlebot3_perception.egg-info/top_level.txt
+[0.696s] writing manifest file 'turtlebot3_perception.egg-info/SOURCES.txt'
+[0.697s] reading manifest file 'turtlebot3_perception.egg-info/SOURCES.txt'
+[0.698s] writing manifest file 'turtlebot3_perception.egg-info/SOURCES.txt'
+[0.699s] running build_ext
+[0.699s] Creating /home/students/group_114/install/turtlebot3_perception/lib/python3.10/site-packages/turtlebot3-perception.egg-link (link to .)
+[0.699s] Installing detection2landmark script to /home/students/group_114/install/turtlebot3_perception/lib/turtlebot3_perception
+[0.699s] Installing landmark_simulator script to /home/students/group_114/install/turtlebot3_perception/lib/turtlebot3_perception
+[0.699s] Installing laserscan2lines script to /home/students/group_114/install/turtlebot3_perception/lib/turtlebot3_perception
+[0.700s] 
+[0.700s] Installed /home/students/group_114/build/turtlebot3_perception
+[0.700s] running symlink_data
+[0.700s] creating /home/students/group_114/install/turtlebot3_perception/share/ament_index
+[0.700s] creating /home/students/group_114/install/turtlebot3_perception/share/ament_index/resource_index
+[0.700s] creating /home/students/group_114/install/turtlebot3_perception/share/ament_index/resource_index/packages
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/resource/turtlebot3_perception -> /home/students/group_114/install/turtlebot3_perception/share/ament_index/resource_index/packages
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/package.xml -> /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception
+[0.700s] creating /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/launch
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/launch/camera.launch.py -> /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/launch
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/launch/rs_launch_composable.launch.py -> /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/launch
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/launch/apriltag.launch.py -> /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/launch
+[0.700s] creating /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/config
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/config/landmarks.yaml -> /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/config
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/config/default.rviz -> /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/config
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/config/oakd_config.yaml -> /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/config
+[0.700s] symbolically linking /home/students/group_114/build/turtlebot3_perception/config/apriltag.yaml -> /home/students/group_114/install/turtlebot3_perception/share/turtlebot3_perception/config
+[0.719s] Invoked command in '/home/students/group_114/build/turtlebot3_perception' returned '0': AMENT_PREFIX_PATH=/home/students/group_114/install/landmark_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/students/group_114/install/landmark_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/students/group_114/install/landmark_msgs/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/students/group_114/build/turtlebot3_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/students/group_114/install/turtlebot3_perception/lib/python3.10/site-packages:/home/students/group_114/install/landmark_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/students/group_114/build/turtlebot3_perception/build --no-deps symlink_data

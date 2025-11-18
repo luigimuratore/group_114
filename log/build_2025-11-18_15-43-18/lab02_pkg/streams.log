@@ -1,0 +1,20 @@
+[0.579s] Invoking command in '/home/students/group_114/build/lab02_pkg': PYTHONPATH=/home/students/group_114/build/lab02_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/students/group_114/install/lab02_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/students/group_114/build/lab02_pkg/build --no-deps symlink_data --force
+[0.747s] running develop
+[0.858s] running egg_info
+[0.858s] writing lab02_pkg.egg-info/PKG-INFO
+[0.858s] writing dependency_links to lab02_pkg.egg-info/dependency_links.txt
+[0.858s] writing entry points to lab02_pkg.egg-info/entry_points.txt
+[0.858s] writing requirements to lab02_pkg.egg-info/requires.txt
+[0.858s] writing top-level names to lab02_pkg.egg-info/top_level.txt
+[0.859s] reading manifest file 'lab02_pkg.egg-info/SOURCES.txt'
+[0.860s] writing manifest file 'lab02_pkg.egg-info/SOURCES.txt'
+[0.861s] running build_ext
+[0.861s] Creating /home/students/group_114/install/lab02_pkg/lib/python3.10/site-packages/lab02-pkg.egg-link (link to .)
+[0.862s] Installing controller script to /home/students/group_114/install/lab02_pkg/lib/lab02_pkg
+[0.862s] 
+[0.862s] Installed /home/students/group_114/build/lab02_pkg
+[0.862s] running symlink_data
+[0.862s] symbolically linking /home/students/group_114/build/lab02_pkg/resource/lab02_pkg -> /home/students/group_114/install/lab02_pkg/share/ament_index/resource_index/packages
+[0.862s] symbolically linking /home/students/group_114/build/lab02_pkg/package.xml -> /home/students/group_114/install/lab02_pkg/share/lab02_pkg
+[0.862s] symbolically linking /home/students/group_114/build/lab02_pkg/launch/lab02_launch.py -> /home/students/group_114/install/lab02_pkg/share/lab02_pkg/launch
+[0.884s] Invoked command in '/home/students/group_114/build/lab02_pkg' returned '0': PYTHONPATH=/home/students/group_114/build/lab02_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/students/group_114/install/lab02_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/students/group_114/build/lab02_pkg/build --no-deps symlink_data --force
