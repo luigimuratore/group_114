@@ -22,15 +22,15 @@ class Task_2(Node):
         # ---- Parameters ----
         self.declare_parameter('prediction_rate', 20.0)
         self.declare_parameter('initial_x', 0.0)
-        self.declare_parameter('initial_y', 0.0)
+        self.declare_parameter('initial_y', 0.77)
         self.declare_parameter('initial_theta', 0.0)
 
         # Process noise on v, omega (drift in speed/turn rate)
-        self.declare_parameter('process_noise_v', 0.05)
-        self.declare_parameter('process_noise_omega', 0.05)
+        self.declare_parameter('process_noise_v', 0.01)
+        self.declare_parameter('process_noise_omega', 0.03)
 
         # Landmark measurement noise
-        self.declare_parameter('measurement_noise_range', 0.1)
+        self.declare_parameter('measurement_noise_range', 0.4)
         self.declare_parameter('measurement_noise_bearing', 0.05)
 
         # Encoder measurement noise (odom -> v, omega)
@@ -71,7 +71,7 @@ class Task_2(Node):
 
         # Subscriptions
         self.odom_sub = self.create_subscription(Odometry,'/odom',self.odom_callback,10)  # Encoders: we use odometry twist as encoder measurement (v, omega)
-        self.landmark_sub = self.create_subscription(LandmarkArray,'/landmarks',self.landmark_callback,10) # Landmarks: range + bearing measurements
+        self.landmark_sub = self.create_subscription(LandmarkArray,'/camera/landmarks',self.landmark_callback,10) # Landmarks: range + bearing measurements
         self.imu_sub = self.create_subscription(Imu,'/imu',self.imu_callback,10) # IMU: angular velocity around z
 
         # Publisher
@@ -175,10 +175,10 @@ class Task_2(Node):
     # Landmarks 
     def _load_landmarks(self):
         pkg_share = get_package_share_directory('lab04_pkg')
-        yaml_file = os.path.join(pkg_share, 'config', 'landmarks.yaml')
+        yaml_file = os.path.join(pkg_share, 'config', 'landmarks_lab.yaml')
         if not os.path.exists(yaml_file):
             pkg_share = get_package_share_directory('turtlebot3_perception')
-            yaml_file = os.path.join(pkg_share, 'config', 'landmarks.yaml')
+            yaml_file = os.path.join(pkg_share, 'config', 'landmarks_lab.yaml')
 
         with open(yaml_file, 'r') as f:
             data = yaml.safe_load(f)
