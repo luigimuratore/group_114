@@ -54,7 +54,7 @@ class Task_1(Node): #Node for EKF-based robot localization using landmarks
 
         # Subscribers
         self.odom_sub = self.create_subscription(Odometry,'/odom',self.odom_callback,10)
-        self.landmark_sub = self.create_subscription(LandmarkArray,'/landmarks', self.landmark_callback,10) # '/camera/landmarks' on real robot
+        self.landmark_sub = self.create_subscription(LandmarkArray,'/camera/landmarks', self.landmark_callback,10) # '/camera/landmarks' on real robot
 
         # Publisher
         self.ekf_pub = self.create_publisher(Odometry, '/ekf', 10)
@@ -154,7 +154,7 @@ class Task_1(Node): #Node for EKF-based robot localization using landmarks
 
     def _load_landmarks(self): #Load landmark positions from YAML
         package_share = get_package_share_directory('lab04_pkg')
-        yaml_file = os.path.join(package_share, 'config', 'landmarks.yaml')
+        yaml_file = os.path.join(package_share, 'config', 'landmarks_lab.yaml')
         self.get_logger().info(f'Loading landmarks from: {yaml_file}')
 
         with open(yaml_file, 'r') as f:
