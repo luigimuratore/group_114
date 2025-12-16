@@ -22,14 +22,17 @@ class task_3(Node):
         super().__init__('task_3')
         # Parameters
         self.declare_parameter('alpha', 0.12) # heading weight
-        self.declare_parameter('beta', 1.0)  # speed weight
+        self.declare_parameter('beta', 0.3)  # velocity reduction weight
         self.declare_parameter('gamma', 0.4) # obstacle weight
+        self.declare_parameter('delta', 0.2) # target distance weight
         self.declare_parameter('control_rate', 15.0)
-        self.declare_parameter('collision_radius', 0.20)  # meters
-        self.declare_parameter('collision_tolerance', 0.18)  # meters
+        self.declare_parameter('collision_radius', 0.20)
+        self.declare_parameter('collision_tolerance', 0.18)
         self.declare_parameter('num_ranges', 18)
         self.declare_parameter('max_lidar_range', 3.5)
         self.declare_parameter('feedback_steps', 50)
+        self.declare_parameter('slowdown_distance', 1.0)  # Distance to start slowing down
+        self.declare_parameter('target_follow_distance', 0.5)  # Desired distance to target
         # State
         self.goal_pose = None
         self.current_pose = None  
@@ -122,18 +125,12 @@ class task_3(Node):
             self.get_logger().warn("Cannot process landmarks without current pose.")
             return
         
-        # Use the first detected landmark (you can modify to use specific tag ID)
+        # Use the first detected landmark
         landmark = msg.landmarks[0]
         
-        # Extract range and bearing from the landmark message
-        # Assuming the landmark pose is in the camera frame
-        # Convert to robot base frame then to odom frame
-        landmark_x = landmark.pose.position.x
-        landmark_y = landmark.pose.position.y
-        
-        # Calculate range and bearing from camera coordinates
-        range_to_landmark = math.hypot(landmark_x, landmark_y)
-        bearing_to_landmark = math.atan2(landmark_y, landmark_x)
+        # Extract range and bearing directly from landmark
+        range_to_landmark = landmark.range
+        bearing_to_landmark = landmark.bearing
         
         # Transform to odom frame using current robot pose
         # Robot pose: [x, y, theta] in odom frame
@@ -173,12 +170,12 @@ class task_3(Node):
         # Convert scan to obstacle coordinates
         obstacles = self.scan_to_obstacles(self.current_pose, self.laser_ranges, self.laser_angles)
 
-        # Sync internal DWA robot state with the latest odometry and last command
+        # Sync internal DWA robot state
         self.dwa.robot.pose = self.current_pose.copy()
         self.dwa.robot.vel = self.last_cmd.copy()
 
-        # DWA: compute control
-        v, w = self.dwa.compute_cmd(goal_xy, self.current_pose, obstacles)
+        # DWA: compute control with modified cost function
+        v, w = self.compute_cmd_with_extended_cost(goal_xy, obstacles)
         self.get_logger().info(f"DWA output: v={v:.2f}, w={w:.2f}")
 
         # Publish command
@@ -209,6 +206,60 @@ class task_3(Node):
             angle_to_goal = math.atan2(dy, dx) - self.current_pose[2]
             self.get_logger().info(f"Distance to goal: {math.hypot(dx, dy):.2f}, Angle to goal: {math.degrees(angle_to_goal):.2f}")
             self.publish_feedback(dist_to_goal)
+
+    def compute_cmd_with_extended_cost(self, goal_xy, obstacles):
+        """
+        Compute control command with extended cost function:
+        J = α·heading + β·vel' + γ·dist_obs + δ·dist_target
+        
+        vel' = cost for slowing down near goal
+        dist_target = cost for maintaining desired distance to target
+        """
+        alpha = self.get_parameter('alpha').value
+        beta = self.get_parameter('beta').value
+        gamma = self.get_parameter('gamma').value
+        delta = self.get_parameter('delta').value
+        slowdown_dist = self.get_parameter('slowdown_distance').value
+        target_follow_dist = self.get_parameter('target_follow_distance').value
+        
+        best_cost = float('inf')
+        best_v = 0.0
+        best_w = 0.0
+        
+        # Sample velocity and angular velocity
+        for v in np.linspace(0, self.dwa.config['max_speed'], self.dwa.config['v_samples']):
+            for w in np.linspace(-self.dwa.config['max_yaw_rate'], self.dwa.config['max_yaw_rate'], self.dwa.config['w_samples']):
+                # Predict trajectory
+                pose = self.dwa.predict_trajectory(self.current_pose, v, w, self.dwa.config['predict_time'])
+                
+                # 1. Heading cost
+                heading_cost = self.dwa.calc_heading_cost(pose[-1], goal_xy)
+                
+                # 2. Velocity reduction cost (slow down near goal)
+                dist_to_goal = np.linalg.norm(goal_xy - self.current_pose[:2])
+                if dist_to_goal < slowdown_dist:
+                    vel_reduction_cost = (1.0 - v / self.dwa.config['max_speed']) * (slowdown_dist - dist_to_goal) / slowdown_dist
+                else:
+                    vel_reduction_cost = 0.0
+                
+                # 3. Obstacle cost
+                obs_cost = self.dwa.calc_obstacle_cost(pose, obstacles)
+                
+                # 4. Target distance cost (keep target at desired distance)
+                target_dist_cost = abs(dist_to_goal - target_follow_dist) / target_follow_dist if dist_to_goal > 0 else 0.0
+                
+                # Total cost
+                cost = (alpha * heading_cost + 
+                       beta * vel_reduction_cost + 
+                       gamma * obs_cost + 
+                       delta * target_dist_cost)
+                
+                if cost < best_cost:
+                    best_cost = cost
+                    best_v = v
+                    best_w = w
+        
+        return best_v, best_w
 
     def stop_robot(self):
         cmd = Twist()

@@ -1,0 +1,19 @@
+running develop
+running egg_info
+creating lab04_pkg.egg-info
+writing lab04_pkg.egg-info/PKG-INFO
+writing dependency_links to lab04_pkg.egg-info/dependency_links.txt
+writing entry points to lab04_pkg.egg-info/entry_points.txt
+writing requirements to lab04_pkg.egg-info/requires.txt
+writing top-level names to lab04_pkg.egg-info/top_level.txt
+writing manifest file 'lab04_pkg.egg-info/SOURCES.txt'
+reading manifest file 'lab04_pkg.egg-info/SOURCES.txt'
+writing manifest file 'lab04_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/students/group_114/install/lab04_pkg/lib/python3.10/site-packages/lab04-pkg.egg-link (link to .)
+Installing task_1 script to /home/students/group_114/install/lab04_pkg/lib/lab04_pkg
+Installing task_2 script to /home/students/group_114/install/lab04_pkg/lib/lab04_pkg
+Installing task_3 script to /home/students/group_114/install/lab04_pkg/lib/lab04_pkg
+
+Installed /home/students/group_114/build/lab04_pkg
+running symlink_data

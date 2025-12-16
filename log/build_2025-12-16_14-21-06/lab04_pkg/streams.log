@@ -1,0 +1,19 @@
+[0.848s] Invoking command in '/home/students/group_114/build/lab04_pkg': CMAKE_PREFIX_PATH=/home/students/group_114/install/landmark_msgs:/home/students/group_114/install/turtlebot3_simulations:/home/students/group_114/install/turtlebot3_gazebo:/home/students/group_114/install/turtlebot3_fake_node:/opt/ros/tb3_ws/install/turtlebot3_simulations:/opt/ros/tb3_ws/install/turtlebot3_gazebo:/opt/ros/tb3_ws/install/turtlebot3_fake_node:/opt/ros/tb3_ws/install/ld08_driver LD_LIBRARY_PATH=/home/students/group_114/install/landmark_msgs/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/students/group_114/build/lab04_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/students/group_114/install/lab04_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/students/group_114/build/lab04_pkg/build --no-deps symlink_data
+[1.026s] running develop
+[1.144s] running egg_info
+[1.144s] writing lab04_pkg.egg-info/PKG-INFO
+[1.144s] writing dependency_links to lab04_pkg.egg-info/dependency_links.txt
+[1.144s] writing entry points to lab04_pkg.egg-info/entry_points.txt
+[1.144s] writing requirements to lab04_pkg.egg-info/requires.txt
+[1.144s] writing top-level names to lab04_pkg.egg-info/top_level.txt
+[1.145s] reading manifest file 'lab04_pkg.egg-info/SOURCES.txt'
+[1.146s] writing manifest file 'lab04_pkg.egg-info/SOURCES.txt'
+[1.147s] running build_ext
+[1.147s] Creating /home/students/group_114/install/lab04_pkg/lib/python3.10/site-packages/lab04-pkg.egg-link (link to .)
+[1.147s] Installing task_1 script to /home/students/group_114/install/lab04_pkg/lib/lab04_pkg
+[1.147s] Installing task_2 script to /home/students/group_114/install/lab04_pkg/lib/lab04_pkg
+[1.147s] Installing task_3 script to /home/students/group_114/install/lab04_pkg/lib/lab04_pkg
+[1.148s] 
+[1.148s] Installed /home/students/group_114/build/lab04_pkg
+[1.148s] running symlink_data
+[1.167s] Invoked command in '/home/students/group_114/build/lab04_pkg' returned '0': CMAKE_PREFIX_PATH=/home/students/group_114/install/landmark_msgs:/home/students/group_114/install/turtlebot3_simulations:/home/students/group_114/install/turtlebot3_gazebo:/home/students/group_114/install/turtlebot3_fake_node:/opt/ros/tb3_ws/install/turtlebot3_simulations:/opt/ros/tb3_ws/install/turtlebot3_gazebo:/opt/ros/tb3_ws/install/turtlebot3_fake_node:/opt/ros/tb3_ws/install/ld08_driver LD_LIBRARY_PATH=/home/students/group_114/install/landmark_msgs/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/students/group_114/build/lab04_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/students/group_114/install/lab04_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/students/group_114/build/lab04_pkg/build --no-deps symlink_data
