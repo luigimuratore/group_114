@@ -15,7 +15,8 @@ import os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 dwa_path = os.path.join(current_dir, '../../planning_control_methods/Controllers/DWA')
 sys.path.append(dwa_path)
-from dwa import DWA  
+from dwa import DWA
+from utils import normalize_angle  
 
 class task_3(Node):
     def __init__(self):
@@ -222,44 +223,61 @@ class task_3(Node):
         slowdown_dist = self.get_parameter('slowdown_distance').value
         target_follow_dist = self.get_parameter('target_follow_distance').value
         
+        # Get trajectories from DWA
+        paths, velocities = self.dwa.get_trajectories(self.current_pose)
+        
+        # Distance to goal
+        dist_to_goal = np.linalg.norm(goal_xy - self.current_pose[:2])
+        
         best_cost = float('inf')
-        best_v = 0.0
-        best_w = 0.0
+        best_idx = 0
         
-        # Sample velocity and angular velocity
-        for v in np.linspace(0, self.dwa.config['max_speed'], self.dwa.config['v_samples']):
-            for w in np.linspace(-self.dwa.config['max_yaw_rate'], self.dwa.config['max_yaw_rate'], self.dwa.config['w_samples']):
-                # Predict trajectory
-                pose = self.dwa.predict_trajectory(self.current_pose, v, w, self.dwa.config['predict_time'])
-                
-                # 1. Heading cost
-                heading_cost = self.dwa.calc_heading_cost(pose[-1], goal_xy)
-                
-                # 2. Velocity reduction cost (slow down near goal)
-                dist_to_goal = np.linalg.norm(goal_xy - self.current_pose[:2])
-                if dist_to_goal < slowdown_dist:
-                    vel_reduction_cost = (1.0 - v / self.dwa.config['max_speed']) * (slowdown_dist - dist_to_goal) / slowdown_dist
-                else:
-                    vel_reduction_cost = 0.0
-                
-                # 3. Obstacle cost
-                obs_cost = self.dwa.calc_obstacle_cost(pose, obstacles)
-                
-                # 4. Target distance cost (keep target at desired distance)
-                target_dist_cost = abs(dist_to_goal - target_follow_dist) / target_follow_dist if dist_to_goal > 0 else 0.0
-                
-                # Total cost
-                cost = (alpha * heading_cost + 
-                       beta * vel_reduction_cost + 
-                       gamma * obs_cost + 
-                       delta * target_dist_cost)
-                
-                if cost < best_cost:
-                    best_cost = cost
-                    best_v = v
-                    best_w = w
+        # Evaluate each trajectory
+        for idx, (path, vel) in enumerate(zip(paths, velocities)):
+            v = vel[0]
+            w = vel[1]
+            
+            # 1. Heading cost: angle between final pose direction and goal
+            final_pose = path[-1]
+            dx = goal_xy[0] - final_pose[0]
+            dy = goal_xy[1] - final_pose[1]
+            angle_to_goal = np.arctan2(dy, dx)
+            heading_error = np.abs(normalize_angle(angle_to_goal - final_pose[2]))
+            heading_cost = heading_error / np.pi
+            
+            # 2. Velocity reduction cost (slow down near goal)
+            if dist_to_goal < slowdown_dist:
+                # Encourage slower speeds when close to goal
+                vel_reduction_cost = (1.0 - v / self.dwa.robot.max_lin_vel) * (slowdown_dist - dist_to_goal) / slowdown_dist
+            else:
+                vel_reduction_cost = 0.0
+            
+            # 3. Obstacle cost: minimum distance to any obstacle in the path
+            min_obs_dist = float('inf')
+            if obstacles is not None and len(obstacles) > 0:
+                for obs in obstacles:
+                    for pose_step in path:
+                        dist_to_obs = np.linalg.norm(pose_step[:2] - obs[:2])
+                        min_obs_dist = min(min_obs_dist, dist_to_obs)
+            if min_obs_dist == float('inf'):
+                obs_cost = 0.0
+            else:
+                obs_cost = max(0.0, self.get_parameter('collision_radius').value - min_obs_dist) / self.get_parameter('collision_radius').value
+            
+            # 4. Target distance cost (keep target at desired distance)
+            target_dist_cost = abs(dist_to_goal - target_follow_dist) / (target_follow_dist + 1e-6) if dist_to_goal > 0 else 0.0
+            
+            # Total cost (lower is better)
+            cost = (alpha * heading_cost + 
+                   beta * vel_reduction_cost + 
+                   gamma * obs_cost + 
+                   delta * target_dist_cost)
+            
+            if cost < best_cost:
+                best_cost = cost
+                best_idx = idx
         
-        return best_v, best_w
+        return velocities[best_idx]
 
     def stop_robot(self):
         cmd = Twist()
